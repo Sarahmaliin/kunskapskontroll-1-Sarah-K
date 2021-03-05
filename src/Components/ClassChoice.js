@@ -17,10 +17,11 @@ const ClassChoice = () =>{
 
 return ( 
         <>
-        <label>2:a klass</label>
+        
         <input type="checkbox" name="second" checked={state.second} onChange={HandleChange}></input>
-        <label>1:a klass</label>
+        <label>2:a klass</label>
         <input type="checkbox" name="first" checked={state.first} onChange={HandleChange} ></input>
+        <label>1:a klass</label>
         </>
      );
 }

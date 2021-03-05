@@ -9,12 +9,95 @@ html{
 }
 
 .Card{
-  min-width: 20rem;
+  width: 21.25rem;
+  height: 32.5rem;
 }
 
 .Card-content{
-  background-color: #CECECE;
-  padding: 1rem 0 1rem 0;
   margin: 0rem;
+  display: grid;
+  width: 100%;
+  grid-template-areas: ;
+}
+
+
+.Rubrik{
+  background-color: #CECECE;
+  margin: 0;
+  height: 3.75rem;
+  width: 21.3rem;
   text-align: center;
+}
+
+.Name{
+  height: 2.5rem;
+  width: 23.75;
+  font-size: 1rem;
+  border-radius: .25rem solid rgba(0, 0, 0, 0.8);
+}
+
+.Nameform{
+  display: grid;
+
+}
+
+.DropDown{
+  width: 8.8rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+}
+
+.small-text{
+  font-size: .75rem;
+}
+
+label{
+  font-family: 'PT Sans', sans-serif;
+}
+
+.DropSelect{
+  display: grid;
+  grid-template-areas: "many many title title"
+  "DropDown-tickets DropDown-tickets DropDown-title DropDown-title"
+}
+
+.many{
+  grid-area: many;
+}
+
+.title{
+  grid-area: title;
+}
+
+.DropDown-tickets{
+  grid-area: DropDown-tickets;
+}
+
+.DropDown-title{
+  grid-area: DropDown-title;
+}
+
+.Namnform{
+  display: grid;
+  grid-template-areas: "FirstName FirstName"
+  "FirstNameField FirstNameField"
+  "LastName LastName"
+  "LastNameField LastNameField";
+}
+
+.FirstName{
+  grid-area: FirstName;
+}
+
+.FirstNameField{
+  grid-area: FirstNameField;
+}
+
+.LastName{
+  grid-area: LastName;
+}
+
+.LastNameField{
+  grid-area: LastNameField;
 }

@@ -13,7 +13,6 @@ class DoneBtn extends Component {
         return ( 
             <>
             <button onClick={() => this.setState({ Done: true})}>Boka biljetter</button>
-            
             </>
          );
     }

@@ -1,5 +1,4 @@
-import { useState } from "react";
-import React from 'react';
+import React, {useState} from 'react';
 
     const NameForm = () => {
 
@@ -17,14 +16,12 @@ import React from 'react';
             };
             
 
-        return <section>
-            <>
-                <label>Förnamn</label>
-                <input type="text" name="firstName" value={state.firstName} onChange={HandleChange}></input>
-                <label>Efternamn</label>
-                <input type="text" name="lastName" value={state.lastName} onChange={HandleChange}></input>
-            </>
-        </section>
+        return <form className="Namnform">
+                <label className="small-text FirstName">Förnamn</label>
+                <input className="Name FirstNameField" type="text" name="firstName" value={state.firstName} onChange={HandleChange}></input>
+                <label className="small-text LastName">Efternamn</label>
+                <input className="Name LastNameField" type="text" name="lastName" value={state.lastName} onChange={HandleChange}></input>
+        </form>
     }
         
             
