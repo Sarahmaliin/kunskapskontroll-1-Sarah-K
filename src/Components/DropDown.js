@@ -1,37 +1,48 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
+import NameForm from './NameForm';
 
-const DropDown = () =>{
-    const [state, setState] = useState({
-        tickets: "1",
-        title: "Ms"
-    })
+class DropDown extends Component{
+    constructor(props){
+        super(props);
+        this.state ={
+            tickets: "1",
+            title: "Ms"
+        }
+    }
 
-    const HandleChange = (e) => {
+    HandleChange = (e) => {
         const value = e.target.value;
-        setState({
-            ...state,
+        this.setState({
+            ...this.state,
             [e.target.name]: value
         })
     };
     
-          return ( 
-            <section className="DropSelect">
-            <label className="small-text many">Antal biljetter</label>
-            <label className="small-text title">Titel</label>
-            <select className="DropDown DropDown-tickets" name="tickets" onChange={HandleChange} value={state.tickets}>
+
+        render(){
+            return ( 
+            <>
+            <section className="Grid-area-DD">
+                <label className="small-text antal">Antal biljetter</label>
+            <label className="small-text titel">Titel</label>
+            <select className="DropDown DropDown-tickets" name="tickets" onChange={this.HandleChange} value={this.state.tickets}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
             </select> 
-
-              <select className="DropDown DropDown-title" name="title" onChange={HandleChange} value={state.title}>
+              <select className="DropDown DropDown-title" name="title" onChange={this.HandleChange} value={this.state.title}>
                   <option value="Ms">Ms</option>
                   <option value="Mrs">Mrs</option>
                   <option value="Mr">Mr</option>
                   <option value="Non-Binary">Non-Binary</option>
               </select>
-              </section>
+            </section>
+            
+                <NameForm className="Name" ticket={this.state.tickets} title={this.state.title} />
+              </>
            );
+        }
+          
       }
   
    

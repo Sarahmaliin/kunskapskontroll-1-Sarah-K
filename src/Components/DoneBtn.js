@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class DoneBtn extends Component {
     constructor(props) {
         super(props);
@@ -11,9 +10,13 @@ class DoneBtn extends Component {
     
     render() { 
         return ( 
-            <>
-            <button onClick={() => this.setState({ Done: true})}>Boka biljetter</button>
-            </>
+            <section>
+                <> 
+                <button className="DoneBtn" onClick={() => this.setState({ Done: true})}>Boka biljetter</button>
+                </> 
+
+            </section>
+                     
          );
     }
 }
