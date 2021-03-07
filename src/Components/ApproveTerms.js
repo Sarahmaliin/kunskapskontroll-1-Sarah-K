@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import DoneBtn from './DoneBtn'
+import DoneBtn from './DoneBtn';
+import reactDOM from 'react-dom';
 
 class ApproveTerms extends Component {
-        constructor(){
-            super();
+        constructor(props){
+            super(props);
             this.state ={
             approve: false
         }
@@ -27,11 +28,10 @@ class ApproveTerms extends Component {
             <label>Godkänner villkoren</label>
         </section>
         
-        < DoneBtn className="Done-btn" okey={this.state.approve}/>
+        <DoneBtn class={this.props.class} tickets={this.props.tickets} title={this.props.title} firstName={this.props.firstName} lastName={this.props.lastName} approved={this.state.approve}/>          
         </>
      ); 
     }
     
 }
- 
 export default ApproveTerms;

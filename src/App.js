@@ -2,24 +2,27 @@ import React, { useState } from 'react'
 import Card from '@material-ui/core/Card';
 import './App.css';
 import ClassChoice from './Components/ClassChoice';
+import NameForm from './Components/NameForm';
+import ApproveTerms from './Components/ApproveTerms';
+import DoneBtn from './Components/DoneBtn';
+import DropDown from './Components/DropDown'
+
 
 function App() {
   const [state, setState] = useState({
-    Åka: "ÅKA TÅG",
-    Gbg: "GÖTEBORG",
-    Sthlm: "STOCKHOLM"
+
 })
 
 
   return (
     <div className="App">
       <Card className="Card">
-        <h1 className="Rubrik">{state.Åka} </h1>
+        <h1 className="Rubrik">ÅKA TÅG</h1>
         <section className="StäderSection">
-        <p className="Gbg">{state.Gbg} </p>
-        <p className="Sthlm">{state.Sthlm} </p>
+        <p className="Gbg">GÖTEBORG</p>
+        <p className="Sthlm">STOCKHOLM</p>
         </section>
-        <ClassChoice className="Class" />
+          <ClassChoice className="Class" />
         {/* 
         Åka tåg del
         städer
@@ -28,7 +31,9 @@ function App() {
         godkänner vilkor
         boka biljett knapp */}
       </Card>
+      
     </div>
+    
   );
 }
 

@@ -1,24 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class DoneBtn extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            Done: false
-         }
-    }
-    
-    render() { 
-        return ( 
+function DoneBtn (props){
+
+
+            return ( 
             <section>
-                <> 
-                <button className="DoneBtn" onClick={() => this.setState({ Done: true})}>Boka biljetter</button>
-                </> 
-
-            </section>
-                     
+                <button className="DoneBtn" onClick={() => {console.log(props.class, props.tickets, props.title, props.firstName, props.lastName, props.approved)}}>Boka biljetter</button> 
+            </section>      
          );
-    }
-}
+            
+        }
+
  
 export default DoneBtn;

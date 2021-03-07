@@ -6,7 +6,7 @@ class DropDown extends Component{
         super(props);
         this.state ={
             tickets: "1",
-            title: "Ms"
+            title: "Ms",
         }
     }
 
@@ -37,13 +37,12 @@ class DropDown extends Component{
                   <option value="Non-Binary">Non-Binary</option>
               </select>
             </section>
-            
-                <NameForm className="Name" ticket={this.state.tickets} title={this.state.title} />
+            <NameForm class={this.props.class} tickets={this.state.tickets} title={this.state.title}/> 
               </>
            );
+           
         }
-          
+         
       }
-  
    
   export default DropDown;

@@ -27,7 +27,7 @@ import ApproveTerms from './ApproveTerms';
                 <label className="small-text LastName">Efternamn</label>
                 <input className="Name LastNameField" type="text" name="lastName" value={this.state.lastName} onChange={this.HandleChange}></input>
             </form> 
-            <ApproveTerms className="Approve" firstName={this.state.firstName} lastName={this.state.lastName} />
+            <ApproveTerms class={this.props.class} tickets={this.props.tickets} title={this.props.title} firstName={this.state.firstName} lastName={this.state.lastName}/> 
             </>
             )     
         }
