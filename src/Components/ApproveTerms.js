@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DoneBtn from './DoneBtn';
-import reactDOM from 'react-dom';
 
 class ApproveTerms extends Component {
         constructor(props){
