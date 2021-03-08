@@ -23,7 +23,7 @@ class ApproveTerms extends Component {
        return ( 
         <>
         <section className="Approve">
-            <input type="checkbox" name="approve" onChange={() => this.setState({approve: true})}></input>
+            <input className="RoundBox" type="radio" name="approve" onChange={() => this.setState({approve: true})}></input>
             <label>Godkänner villkoren</label>
         </section>
         

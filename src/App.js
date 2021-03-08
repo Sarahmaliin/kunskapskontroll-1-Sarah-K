@@ -11,8 +11,12 @@ function App() {
       <Card className="Card">
         <h1 className="Rubrik">ÅKA TÅG</h1>
         <section className="StäderSection">
-        <p className="Gbg">GÖTEBORG</p>
-        <p className="Sthlm">STOCKHOLM</p>
+        <section className="Gbg"> 
+        <p>GÖTEBORG</p> 
+        <p className="time start">10:30</p></section>
+        <section className="Sthlm"><p>STOCKHOLM</p>
+        <p className="time end">14:45</p></section>
+        
         </section>
           <ClassChoice className="Class" />
       </Card>

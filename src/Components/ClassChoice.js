@@ -29,11 +29,11 @@ class ClassChoice extends Component{
         
         <section className="ClassChoice">
             <section className="Class2">
-            <input id="2" className="RoundBox" type="checkbox" name="second" checked={this.state.second} onChange={this.HandleChange} ></input>
+            <input id="2" className="RoundBox" type="radio" name="second" checked={this.state.second} onChange={this.HandleChange} ></input>
             <label>2:a klass</label>
             </section>
             <section className="Class1">
-               <input id="1" className="RoundBox" type="checkbox" name="first" checked={this.state.first} onChange={this.HandleChange} ></input>
+               <input id="1" className="RoundBox" type="radio" name="first" checked={this.state.first} onChange={this.HandleChange} ></input>
             <label>1:a klass</label> 
             </section>
         </section>
